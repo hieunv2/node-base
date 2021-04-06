@@ -1,0 +1,19 @@
+version: "3.3"
+
+services:
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - mysql-store:/var/lib/mysql
+      # - ./docker/mysql/logs:/var/log/mysql
+      - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+    environment:
+      - MYSQL_DATABASE=bon
+      - MYSQL_USER=bon
+      - MYSQL_PASSWORD=1
+      - MYSQL_ROOT_PASSWORD=1
+    ports:
+      - 13319:3306
+
+volumes:
+  mysql-store:

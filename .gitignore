@@ -1,0 +1,23 @@
+# Editor
+.idea/
+.vscode/
+
+# Environment
+.env
+
+# Dependency directory
+/node_modules
+
+# Static folder
+/public
+
+# debug
+/log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+documents.json
+
+# seeder folder
+src/database/seeders/data
